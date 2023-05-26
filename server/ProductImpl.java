@@ -1,6 +1,6 @@
 import java.rmi.RemoteException;
 
-public class ProductImpl implements Product{
+public class ProductImpl extends Struct implements Product{
 	// Attributes of product
 	private String name;
 	private String description;
