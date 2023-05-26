@@ -1,6 +1,7 @@
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public class ProductImpl extends Struct implements Product{
+public class ProductImpl implements Product{
 	// Attributes of product
 	private String name;
 	private String description;
@@ -22,5 +23,8 @@ public class ProductImpl extends Struct implements Product{
 	}
 	public void changeProductName(String newName) throws RemoteException{
 		this.name = newName;
+	}
+	public Remote setProducts() {
+		return null;
 	}
 }
