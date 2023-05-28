@@ -1,6 +1,4 @@
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 public class normalClass extends ncAbstract{
@@ -8,17 +6,6 @@ public class normalClass extends ncAbstract{
     private ProductImpl p2;
     private ProductImpl p3;
     private ProductImpl p4;
-    private Registry registry;
-
-    public void setServer() throws RemoteException{
-        try {
-            System.setProperty("java.rmi.server.hostname", "127.0.0.1");
-            registry = LocateRegistry.getRegistry("127.0.0.1", 9100);
-            System.out.println("Server has been started...");
-        } catch (Exception e) {
-            System.out.println("Error setting server..." + e);
-        }
-    }
 
     public void setProducts() throws RemoteException{
         p1 = new ProductImpl("Laptop","Lenovo Laptop", 1740);
